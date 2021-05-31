@@ -21,7 +21,7 @@ wpa_enabled_choice = "N"
 print()
 wpa_entered_key = "NO PASSWORD"
 print()
-auto_config_choice ="y"
+auto_config_choice ="n"
 print()
 auto_config_delay = "300"
 print()
