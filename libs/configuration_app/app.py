@@ -88,14 +88,17 @@ def create_wpa_supplicant(ssid, wifi_key):
     temp_conf_file = open('wpa_supplicant.conf.tmp', 'w')
 
     temp_conf_file.write('ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev\n')
+    temp_conf_file.write('country=us\n')
     temp_conf_file.write('update_config=1\n')
     temp_conf_file.write('\n')
     temp_conf_file.write('network={\n')
     temp_conf_file.write('	ssid="' + ssid + '"\n')
+    temp_conf_file.write('	scan_ssid=1\n')
 
     if wifi_key == '':
         temp_conf_file.write('	key_mgmt=NONE\n')
     else:
+        temp_conf_file.write('	key_mgmt=WPA-PSK\n')
         temp_conf_file.write('	psk="' + wifi_key + '"\n')
 
     temp_conf_file.write('	}')
