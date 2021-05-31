@@ -23,9 +23,9 @@ wpa_entered_key = "NO PASSWORD"
 print()
 auto_config_choice ="y"
 print()
-auto_config_delay = 300
+auto_config_delay = "300"
 print()
-server_port_choice = 80
+server_port_choice = "80"
 print()
 ssl_enabled_choice = "N"
 print()
